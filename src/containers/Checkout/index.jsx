@@ -12,7 +12,7 @@ const {state:{clientSecret},
   console.log(clientSecret);
   
   if(!clientSecret){
-    return<div>Erro, tente novamente</div>
+    return<div> Erro, tente novamente</div>
 
     
   }
