@@ -61,6 +61,27 @@ export function Orders() {
     }
     setActiveStatus(status.id);
   }
+useEffect(() => {
+if(activeStatus === 0) {
+  setFilteredOrders(orders);
+
+} else {
+
+  const statusIndex = orderStatusOptions.findIndex
+  ((item) => item.id === activeStatus,
+
+  );
+  const newFilteredOrders = orders.filter
+  ((order) => order.status === orderStatusOptions[statusIndex].value,
+
+  );
+  setFilteredOrders(newFilteredOrders);
+}
+
+}, [activeStatus, orders])
+ 
+
+
   return (
     <>
       <Filter>
@@ -72,6 +93,7 @@ export function Orders() {
           >
             {status.label}</FilterOption>
         ))}
+
       </Filter>
       <TableContainer sx={{ width: "1500%" }} component={Paper} >
         <Table aria-label="collapsible table">

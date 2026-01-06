@@ -31,7 +31,7 @@ cursor:pointer;
 background:none;
 border:none;
 color:${props => props.$isActiveStatus ? " #ce28c8ff" :"rgb(125, 125, 135)"};
-border-bottom: ${props => props.$isActiveStatus ?     "3px solid  #ce28c8ff" :"none"};
+border-bottom:${props => props.$isActiveStatus ? "3px solid  #ce28c8ff" :"none"};
 font-size:15px;
 line-height:16px;
 
